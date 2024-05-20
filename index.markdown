@@ -237,15 +237,14 @@ Construct a program by dragging&amp;dropping and reordering lines. The construct
 })();
 </script>
 
-## Parsons 6 Trial
-Construct the factorial  program
+## Parson 6 trial
 
-<div id="p6-This is a trial-sortableTrash" class="sortable-code"></div> 
-<div id="p6-This is a trial-sortable" class="sortable-code"></div> 
+<div id="trial-sortableTrash" class="sortable-code"></div> 
+<div id="trial-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
 <p> 
-    <input id="p6-This is a trial-feedbackLink" value="Get Feedback" type="button" /> 
-    <input id="p6-This is a trial-newInstanceLink" value="Reset Problem" type="button" /> 
+    <input id="trial-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="trial-newInstanceLink" value="Reset Problem" type="button" /> 
 </p> 
 <script type="text/javascript"> 
 (function(){
@@ -258,7 +257,7 @@ Construct the factorial  program
     "result = factorial(number)\n" +
     "print(&quot;The factorial of&quot;, number, &quot;is&quot;, result)";
   var parsonsPuzzle = new ParsonsWidget({
-    "sortableId": "This is a trial-sortable",
+    "sortableId": "trial-sortable",
     "max_wrong_lines": 10,
     "grader": ParsonsWidget._graders.LineBasedGrader,
     "exec_limit": 2500,
@@ -269,11 +268,11 @@ Construct the factorial  program
   });
   parsonsPuzzle.init(initial);
   parsonsPuzzle.shuffleLines();
-  $("#p6-This is a trial-newInstanceLink").click(function(event){ 
+  $("#trial-newInstanceLink").click(function(event){ 
       event.preventDefault(); 
       parsonsPuzzle.shuffleLines(); 
   }); 
-  $("#p6-This is a trial-feedbackLink").click(function(event){ 
+  $("#trial-feedbackLink").click(function(event){ 
       event.preventDefault(); 
       parsonsPuzzle.getFeedback(); 
   }); 
