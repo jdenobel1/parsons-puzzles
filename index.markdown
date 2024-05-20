@@ -236,6 +236,47 @@ Construct a program by dragging&amp;dropping and reordering lines. The construct
   });
 })();
 </script>
+## Parsons 6 Trial
+
+<div id="This is a trial-sortableTrash" class="sortable-code"></div> 
+<div id="This is a trial-sortable" class="sortable-code"></div> 
+<div style="clear:both;"></div> 
+<p> 
+    <input id="This is a trial-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="This is a trial-newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+<script type="text/javascript"> 
+(function(){
+  var initial = "def factorial(n):\n" +
+    "    if n == 0:\n" +
+    "        return 1\n" +
+    "    else:\n" +
+    "        return n * factorial(n - 1)\n" +
+    "number = int(input(&quot;Enter a number: &quot;))\n" +
+    "result = factorial(number)\n" +
+    "print(&quot;The factorial of&quot;, number, &quot;is&quot;, result)";
+  var parsonsPuzzle = new ParsonsWidget({
+    "sortableId": "This is a trial-sortable",
+    "max_wrong_lines": 10,
+    "grader": ParsonsWidget._graders.LineBasedGrader,
+    "exec_limit": 2500,
+    "can_indent": true,
+    "x_indent": 50,
+    "lang": "en",
+    "show_feedback": true
+  });
+  parsonsPuzzle.init(initial);
+  parsonsPuzzle.shuffleLines();
+  $("#This is a trial-newInstanceLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.shuffleLines(); 
+  }); 
+  $("#This is a trial-feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+})(); 
+</script>
 
 ### Implementation Notes
 
