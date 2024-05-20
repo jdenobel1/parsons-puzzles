@@ -236,7 +236,8 @@ Construct a program by dragging&amp;dropping and reordering lines. The construct
   });
 })();
 </script>
-## Parsons 6 Trial
+
+### Parsons 6 Trial
 
 <div id="This is a trial-sortableTrash" class="sortable-code"></div> 
 <div id="This is a trial-sortable" class="sortable-code"></div> 
