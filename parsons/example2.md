@@ -38,4 +38,4 @@ $("#feedbackLink").click(function(event){
 });
 </script>
 
-[Previous](./example1.html) [Next](./example3.html)
+[Previous](./example1.html) [Next](./example3.md)
