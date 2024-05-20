@@ -237,14 +237,15 @@ Construct a program by dragging&amp;dropping and reordering lines. The construct
 })();
 </script>
 
-### Parsons 6 Trial
+## Parsons 6 Trial
+Construct the factorial  program
 
-<div id="This is a trial-sortableTrash" class="sortable-code"></div> 
-<div id="This is a trial-sortable" class="sortable-code"></div> 
+<div id="p6-This is a trial-sortableTrash" class="sortable-code"></div> 
+<div id="p6-This is a trial-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
 <p> 
-    <input id="This is a trial-feedbackLink" value="Get Feedback" type="button" /> 
-    <input id="This is a trial-newInstanceLink" value="Reset Problem" type="button" /> 
+    <input id="p6-This is a trial-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="p6-This is a trial-newInstanceLink" value="Reset Problem" type="button" /> 
 </p> 
 <script type="text/javascript"> 
 (function(){
@@ -268,11 +269,11 @@ Construct a program by dragging&amp;dropping and reordering lines. The construct
   });
   parsonsPuzzle.init(initial);
   parsonsPuzzle.shuffleLines();
-  $("#This is a trial-newInstanceLink").click(function(event){ 
+  $("#p6-This is a trial-newInstanceLink").click(function(event){ 
       event.preventDefault(); 
       parsonsPuzzle.shuffleLines(); 
   }); 
-  $("#This is a trial-feedbackLink").click(function(event){ 
+  $("#p6-This is a trial-feedbackLink").click(function(event){ 
       event.preventDefault(); 
       parsonsPuzzle.getFeedback(); 
   }); 
